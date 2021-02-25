@@ -18,11 +18,14 @@ from django.contrib import admin
 from django.urls import path
 
 from djangoProject import settings
-from .views import home_page
+from .views import home_page,header,footer
 
 urlpatterns = [
     path('', home_page),
+    path('header', header,name='header_url'),
+    path('footer', footer,name='footer_url'),
     path('admin/', admin.site.urls),
+
 ]
 
 if settings.DEBUG:
