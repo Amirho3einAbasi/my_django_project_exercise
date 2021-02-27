@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_render_partial',
+    #............my_project_app................
+    'project_account'
 ]
 
 MIDDLEWARE = [

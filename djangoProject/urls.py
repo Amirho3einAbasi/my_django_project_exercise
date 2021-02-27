@@ -15,16 +15,18 @@ Including another URLconf
 """
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 
 from djangoProject import settings
 from .views import home_page,header,footer
 
 urlpatterns = [
-    path('', home_page),
+    path('', home_page,name='home'),
     path('header', header,name='header_url'),
     path('footer', footer,name='footer_url'),
+    path('',include('project_account.urls')),
     path('admin/', admin.site.urls),
+
 
 ]
 
