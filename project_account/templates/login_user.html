@@ -9,7 +9,9 @@
 						<h2>ورود به حساب کاربـری :</h2>
 						<form method="post">
                             {% csrf_token %}
-                            {{ login_form }}
+                            {{ login_form.user_name.errors }}
+                            {{ login_form.user_name }}
+                            {{ login_form.user_password }}
 							<span>
 								<input type="checkbox" class="checkbox">
 								مرا بخاطـر بسپـار

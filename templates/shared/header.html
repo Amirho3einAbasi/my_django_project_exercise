@@ -53,7 +53,9 @@
                             <li><a href="http://127.0.0.1:8000/admin/"><i class="fa fa-shopping-cart"></i> ادمین </a></li>
                             {% if not  request.user.is_authenticated %}
                             <li><a href="{% url 'login' %}"><i class="fa fa-lock"></i> ورود</a></li>
-                            <li><a href="{% url 'login' %}"><i class="fa fa-lock"></i> ثبت نام </a></li>
+                            <li><a href="{% url 'register' %}"><i class="fa fa-lock"></i> ثبت نام </a></li>
+                                {% else %}
+                                <li><a href="http://127.0.0.1:8000/admin/logout/"><i class="fa fa-lock"></i> خروج </a></li>
                             {% endif %}
 
                         </ul>
