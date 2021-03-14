@@ -1,0 +1,48 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+{% block content %}
+    	 <div id="contact-page" class="container">
+    	<div class="bg">
+
+    		<div class="row">
+				<div class="col-sm-4">
+	    			<div class="contact-info">
+	    				<h2 class="title text-center">لوگـو شرکت</h2>
+						<img src="{% static 'images/home/About-Logo.jpg' %}" class="img-responsive" />
+	    			</div>
+    			</div>
+	    		<div class="col-sm-8">
+	    			<div class="about">
+	    				<h2 class="title text-center">دربـاره ما</h2>
+						<p class="about-desc">
+	    				{{ about }}
+						</p>
+						<p class="about-desc">
+							کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.
+						</p>
+	    			</div>
+	    		</div>
+	    	</div>
+
+			<div class="row">
+				<div class="col-sm-12 about-address">
+					<address>
+	    				<p>گـروه تکنوگـرافی 1614 | یـران - آذربایجـان غربـی - خـوی | مجتـمع تجـاری تفریحـی شمس - طبـقه 2 - پلاک 54 | تلفن تماس : 80 21 24 36 044 | فکس : 80 21 24 36 044 | ایمیـل : info@1614GP.ir
+						</p>
+	    			</address>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="container">
+	    			<div class="col-sm-12" style="overflow: hidden; margin-bottom: 40px">    			   		<h2 class="title text-center">مـا اینجـا هستیـم ... </h2>    			    						<div id="gmap" class="contact-map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6411.372089822794!2d52.683339!3d36.537568!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8f89c9ed732321%3A0x6dc4858c072e61a6!2z2KfYs9iq2KfZhiDZhdin2LLZhtiv2LHYp9mG2Iwg2KjYp9io2YTYjCDYs9ix2K_Yp9ix2KfZhiAxONiMINin24zYsdin2YY!5e0!3m2!1sfa!2sus!4v1615372285581!5m2!1sfa!2sus" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+
+    	</div>
+    </div><!--/#contact-page-->
+{% endblock %}
+

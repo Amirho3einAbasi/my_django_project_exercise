@@ -18,13 +18,15 @@ from django.contrib import admin
 from django.urls import path,include
 
 from djangoProject import settings
-from .views import home_page,header,footer
+from .views import home_page,header,footer,about_us
 
 urlpatterns = [
     path('', home_page,name='home'),
     path('header', header,name='header_url'),
     path('footer', footer,name='footer_url'),
+    path('about_us', about_us,name='about_us'),
     path('',include('project_account.urls')),
+    path('',include('project_products.urls')),
     path('admin/', admin.site.urls),
 
 
