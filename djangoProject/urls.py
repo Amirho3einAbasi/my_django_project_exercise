@@ -26,7 +26,7 @@ urlpatterns = [
     path('footer', footer,name='footer_url'),
     path('about_us', about_us,name='about_us'),
     path('',include('project_account.urls')),
-    path('',include('project_products.urls')),
+    path('',include('django_products.urls')),
     path('admin/', admin.site.urls),
 
 

@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django_render_partial',
     #............my_project_app................
     'project_account',
-    'project_products'
+    'django_products',
 ]
 
 MIDDLEWARE = [
