@@ -1,0 +1,20 @@
+<div class="col-sm-4">
+							<div class="product-image-wrapper">
+								<div class="single-products">
+									<div class="productinfo text-center">
+										<img src="{{ item.image.url }}" alt="" />
+                                        <h2>{{ item.title }}</h2>
+										<p>{{ item.description | truncatewords:15}}</p>
+                                        <h2>{{ item.price}}تومان</h2>
+{#										<a href="/products_detail/{{ item.slug }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>مشاهده ی محصول</a>#}
+										<a href="{{ item.get_absolute_url }}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>مشاهده ی محصول</a>
+									</div>
+								</div>
+								<div class="choose">
+									<ul class="nav nav-pills nav-justified">
+										<li><a href=""><i class="fa fa-plus-square"></i>لیست علاقه مندی ها</a></li>
+										<li><a href=""><i class="fa fa-plus-square"></i>مقایسه</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>

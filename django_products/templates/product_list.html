@@ -10,24 +10,7 @@
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center"> لیست محصولات </h2>
            {% for item in page_obj %}
-						<div class="col-sm-4">
-							<div class="product-image-wrapper">
-								<div class="single-products">
-									<div class="productinfo text-center">
-										<img src="{{ item.image.url }}" alt="" />
-										<h2>{{ item.price}}تومان</h2>
-										<p>{{ item.description | truncatewords:15}}</p>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>مشاهده ی محصول</a>
-									</div>
-								</div>
-								<div class="choose">
-									<ul class="nav nav-pills nav-justified">
-										<li><a href=""><i class="fa fa-plus-square"></i>لیست علاقه مندی ها</a></li>
-										<li><a href=""><i class="fa fa-plus-square"></i>مقایسه</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
+                    {% include 'component/product_item_component.html' with item=item %}
             {% endfor %}
 						<ul class="pagination">
 
