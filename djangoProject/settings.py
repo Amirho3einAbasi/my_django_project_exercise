@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     #............my_project_app................
     'project_account',
     'django_products',
+    'project_tag',
+    'project_product_category'
 ]
 
 MIDDLEWARE = [
