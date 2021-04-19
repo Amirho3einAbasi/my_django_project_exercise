@@ -1,8 +1,10 @@
 from django.shortcuts import render
-
+from project_slider.models import Slider
 
 def home_page(request):
+    sliders = Slider.objects.all()
     context = {
+        'sliders' : sliders,
         'home': 'home'
     }
     return render(request, 'home_page.html', context)

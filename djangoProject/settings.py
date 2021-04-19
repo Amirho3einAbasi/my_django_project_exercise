@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'project_account',
     'django_products',
     'project_tag',
-    'project_product_category'
+    'project_product_category',
+    'project_slider'
 ]
 
 MIDDLEWARE = [

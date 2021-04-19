@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 
 from project_product_category.models import Category
-from .models import Product
+from .models import Product,product_gallery
 
 
 # Create your views here.

@@ -17,7 +17,6 @@ class Product_manager(models.Manager):
         return Product.objects.filter(category__url_name__iexact=category_name_in_url,active=True)
 
 
-
 class Product(models.Model):
     title = models.CharField(max_length=50, verbose_name='عنوان')
     slug = models.SlugField(default='', blank=True, unique=True)
@@ -36,7 +35,7 @@ class Product(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return f'/products_detail/{self.slug}/{self.title.replace(" ","+")}'
+        return f'/products_detail/{self.id}/{self.title.replace(" ","+")}'
 
 
 
@@ -45,3 +44,17 @@ def product_pre_save_receiver(sender, instance, *args, **kwargs):
         instance.slug = unique_slug_generator(instance)
 pre_save.connect(product_pre_save_receiver, sender=Product)
 
+
+class product_gallery(models.Model):
+    title = models.CharField(max_length=150,verbose_name='عنوان')
+    image = models.ImageField(upload_to='products_gallery/',verbose_name='عکس')
+    # To define(تعریف کردن) a many-to-one relationship, use ForeignKey
+    #  on_delete = models.CASCADE -> یعنی وقتی محصول مورد نظر پاک شد گالری تصاویرم پاک بشود
+    product = models.ForeignKey(Product,on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name_plural = 'گالری تصاوبر محصولات'
+        verbose_name = 'گالری محصول'
+
+    def __str__(self):
+        return self.title
